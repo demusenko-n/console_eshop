@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection;
+using System.Reflection.Metadata;
 using System.Text;
 using SolidTask.App;
 using SolidTask.Presentation.Controllers;
@@ -12,10 +14,14 @@ namespace SolidTask
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.InputEncoding = Console.OutputEncoding = Encoding.Unicode;
+            
+            Application.Run();
+            
+            var controllerType = Type.GetType("SolidTask.Presentation.Controllers.MainPageController");
 
-            Application application = new();
-            application.Run();
+            object controller = Application.Context.Resolve(controllerType);
 
+            controller.GetType().GetMethod("Index").Invoke(controller, null);
         }
     }
 }
