@@ -3,7 +3,7 @@
     public class ApplicationContext
     {
         //private readonly IContainer _container;
-        //public Session Session { get; }
+        public Session Session { get; }
 
         //private void RegisterControllers(ContainerBuilder builder)
         //{

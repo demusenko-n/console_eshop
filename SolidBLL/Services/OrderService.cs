@@ -2,7 +2,7 @@
 
 namespace SolidBLL.Services
 {
-    public class OrderService
+    public class OrderService : IOrderService
     {
         private readonly IUnitOfWork _unitOfWork;
         public OrderService(IUnitOfWork unitOfWork)

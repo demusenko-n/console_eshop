@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SolidTask\SolidDAL.csproj" />
+    <ProjectReference Include="..\SolidDAL\SolidDAL.csproj" />
   </ItemGroup>
 
 </Project>
