@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace SolidTask.Utility
+namespace SolidDAL.Utility
 {
     public abstract class Enumeration : IComparable
     {

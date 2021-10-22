@@ -1,47 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using SolidTask.Domain.Entities;
+using SolidDAL.Context;
+using SolidDAL.Domain.Entities;
 
-namespace SolidTask.Repositories
+namespace SolidDAL.Repositories
 {
-    public class OrderCollectionRepository : IOrderRepository
+    public class OrderCollectionRepository : IRepository<Order>
     {
-        private readonly List<Order> _orders;
+        private readonly StoreContext _context;
 
-        public OrderCollectionRepository()
+        public OrderCollectionRepository(StoreContext context)
         {
-            _orders = new List<Order>();
+            _context = context;
         }
 
         public IEnumerable<Order> GetAllByFilter(Func<Order, bool> predicate)
         {
-            return _orders.Where(predicate);
+            return _context.Orders.Where(predicate);
         }
 
         public Order GetById(Guid id)
         {
-            return _orders.First(order => order.Id == id);
+            return _context.Orders.First(order => order.Id == id);
         }
 
         public void Create(Order item)
         {
-            _orders.Add(item);
+            _context.Orders.Add(item);
         }
 
         public void Delete(Order item)
         {
-            _orders.Remove(item);
+            _context.Orders.Remove(item);
         }
 
         public void Update(Order item)
         {
-            int index = _orders.FindIndex(order => order.Equals(item));
+            int index = _context.Orders.FindIndex(order => order.Equals(item));
             if (index == -1)
             {
                 throw new InvalidOperationException("Item doesn't exist in collection");
             }
-            _orders[index] = item;
+            _context.Orders[index] = item;
         }
     }
 }

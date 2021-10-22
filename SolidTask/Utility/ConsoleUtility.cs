@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace SolidTask.Utility
+namespace SolidDAL.Utility
 {
     public static class ConsoleUtility
     {

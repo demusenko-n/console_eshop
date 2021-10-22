@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "JRwS5Q2I3QJjt2UikPb2EOoMKSulnU1WmjyDSbcQtLyrybAPPwn3YYLMU8ddJORPpKhe5EVEHROQiuZ8c3ztiQ==",
+  "dgSpecHash": "NggjcbTJR1y5xqTQuEHfVPd1oZlnXWW2aDPPKG0qIPSylGYsrFoWCudNj1WfJvv/GW/3BbvcFeIxM0eBJSCxaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\untouchable\\source\\repos\\SolidTask\\SolidTask\\SolidTask.csproj",
+  "projectFilePath": "C:\\Users\\untouchable\\source\\repos\\SolidTask\\SolidTask\\SolidDAL.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\untouchable\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
-    "C:\\Users\\untouchable\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+    "C:\\Users\\untouchable\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
+    "C:\\Users\\untouchable\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

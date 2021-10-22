@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using SolidTask.Domain.Entities;
+using SolidDAL.Domain.Entities;
 
-namespace SolidTask.Repositories
+namespace SolidDAL.Repositories
 {
     public interface IRepository<T> where T : Entity
     {
