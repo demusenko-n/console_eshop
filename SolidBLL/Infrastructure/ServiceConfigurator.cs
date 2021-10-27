@@ -11,6 +11,7 @@ namespace SolidBLL.Infrastructure
             serviceCollection.AddTransient<IOrderService, OrderService>();
             serviceCollection.AddTransient<IProductService, ProductService>();
             serviceCollection.AddTransient<IUserService, UserService>();
+            serviceCollection.AddSingleton<Session>();
         }
     }
 }

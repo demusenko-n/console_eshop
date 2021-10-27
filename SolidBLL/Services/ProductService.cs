@@ -1,4 +1,7 @@
-﻿using SolidDAL.UoW;
+﻿using System;
+using System.Collections.Generic;
+using SolidDAL.Entities;
+using SolidDAL.UoW;
 
 namespace SolidBLL.Services
 {
@@ -8,6 +11,12 @@ namespace SolidBLL.Services
         public ProductService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+        }
+
+        public IEnumerable<Product> GetProductsByPartOfName(string partOfName)
+        {
+            return _unitOfWork.ProductRepository
+                .GetAllByFilter(product=>product.Name.Contains(partOfName, StringComparison.CurrentCultureIgnoreCase));
         }
     }
 }

@@ -40,6 +40,25 @@ namespace SolidDAL.Utility
             return Name == other.Name && Id == other.Id;
         }
 
+        public static bool operator >(Enumeration left, Enumeration right)
+        {
+            return left.Id > right.Id;
+        }
+        public static bool operator <(Enumeration left, Enumeration right)
+        {
+            return left.Id < right.Id;
+        }
+        public static bool operator <=(Enumeration left, Enumeration right)
+        {
+            return left.Id <= right.Id;
+        }
+        public static bool operator >=(Enumeration left, Enumeration right)
+        {
+            return left.Id >= right.Id;
+        }
+
+
+
         public override int GetHashCode()
         {
             return HashCode.Combine(Name, Id);

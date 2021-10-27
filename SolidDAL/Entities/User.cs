@@ -1,4 +1,4 @@
-﻿namespace SolidDAL.Domain.Entities
+﻿namespace SolidDAL.Entities
 {
     public class User : Entity
     {

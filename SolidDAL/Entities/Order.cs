@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SolidDAL.Domain.Entities
+namespace SolidDAL.Entities
 {
     public class Order : Entity
     {

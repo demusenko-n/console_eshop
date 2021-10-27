@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SolidDAL.Domain.Entities
+namespace SolidDAL.Entities
 {
     public abstract class Entity
     {

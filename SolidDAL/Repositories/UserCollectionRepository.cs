@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using SolidDAL.Context;
-using SolidDAL.Domain.Entities;
+using SolidDAL.Entities;
 
 namespace SolidDAL.Repositories
 {

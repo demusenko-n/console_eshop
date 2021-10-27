@@ -1,6 +1,6 @@
 ﻿using System;
 using SolidDAL.Context;
-using SolidDAL.Domain.Entities;
+using SolidDAL.Entities;
 using SolidDAL.Repositories;
 
 namespace SolidDAL.UoW

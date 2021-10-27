@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using SolidDAL.Domain.Entities;
+using SolidDAL.Entities;
 
 namespace SolidDAL.Context
 {
