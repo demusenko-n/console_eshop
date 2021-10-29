@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using SolidDAL.Entities;
 
 namespace SolidBLL
 {
@@ -8,7 +9,11 @@ namespace SolidBLL
 
         public Session()
         {
-            _props = new Dictionary<string, object>();
+            _props = new Dictionary<string, object>
+            {
+                ["User"] = new User("", "", "", "") { Role = Role.Guest },
+                ["Cart"] = new Cart()
+            };
         }
 
         public object this[string key]

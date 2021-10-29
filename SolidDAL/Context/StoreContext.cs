@@ -8,7 +8,7 @@ namespace SolidDAL.Context
         public List<Order> Orders { get; }
 
         public List<User> Users { get; }
-
+            
         public List<Product> Products { get; }
 
         public StoreContext()

@@ -10,7 +10,6 @@ namespace SolidBLL.Menus.MainMenuOptions.UserOptions
         private readonly IUserService _userService;
         public LogoutOption(IPresenter presenter, Session session, IUserService userService)
         {
-
             _presenter = presenter;
             _session = session;
             _userService = userService;
@@ -19,7 +18,7 @@ namespace SolidBLL.Menus.MainMenuOptions.UserOptions
         public override void Execute()
         {
             _session["User"] = _userService.Guest;
-            _presenter.Write("Logout successful!\n");
+            _presenter.WriteLine("Logout successful!");
         }
     }
 }

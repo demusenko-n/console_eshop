@@ -27,5 +27,15 @@ namespace SolidBLL.Services
             var allOrders = _unitOfWork.OrderRepository.GetAllByFilter(x => true);
             return allOrders.GroupBy(x => x.Client).ToDictionary(grouping=>grouping.Key, grouping=>grouping.Select(x=>x));
         }
+
+        public void CreateOrder(Order newOrder)
+        {
+            _unitOfWork.OrderRepository.Create(newOrder);
+        }
+
+        public IEnumerable<Order> GetAllOrdersByUser(User user)
+        {
+            return _unitOfWork.OrderRepository.GetAllByFilter(order => order.Client.Equals(user));
+        }
     }
 }

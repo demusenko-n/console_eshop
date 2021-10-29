@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using SolidDAL.Entities;
 
 namespace SolidBLL
 {

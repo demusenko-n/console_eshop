@@ -36,7 +36,7 @@ namespace SolidDAL.Repositories
 
         public void Update(User item)
         {
-            int index = _context.Users.FindIndex(user => user.Equals(item));
+            var index = _context.Users.FindIndex(user => user.Equals(item));
             if (index == -1)
             {
                 throw new InvalidOperationException("Item doesn't exist in collection");

@@ -12,7 +12,7 @@ namespace SolidPL
             if (!ConsoleUtility.CancelableReadLine(out var result)) throw new OptionInterruptedByUserException();
             return result;
         }
-        public void Write(string text) => Console.Write(text);
+        public void WriteLine(string text) => Console.WriteLine(text);
         public void Clear() => ConsoleUtility.CustomClear();
         public void Pause() => Console.ReadKey();
     }

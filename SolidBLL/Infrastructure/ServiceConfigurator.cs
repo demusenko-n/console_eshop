@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using SolidBLL.Menus.MainMenuOptions;
 using SolidBLL.Services;
 
 namespace SolidBLL.Infrastructure
@@ -12,6 +13,8 @@ namespace SolidBLL.Infrastructure
             serviceCollection.AddTransient<IProductService, ProductService>();
             serviceCollection.AddTransient<IUserService, UserService>();
             serviceCollection.AddSingleton<Session>();
+
+            DiMainMenuConfigurator.Configure(serviceCollection);
         }
     }
 }

@@ -65,7 +65,7 @@ namespace SolidPL.Utility
         public static void CustomClear()
         {
             Console.SetCursorPosition(0, 0);
-            for (int i = 0; i < Console.WindowHeight; i++)
+            for (var i = 0; i < Console.WindowHeight; i++)
             {
                 Console.Write(new string(' ', Console.WindowWidth - 1));
             }

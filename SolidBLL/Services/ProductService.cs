@@ -18,5 +18,16 @@ namespace SolidBLL.Services
             return _unitOfWork.ProductRepository
                 .GetAllByFilter(product=>product.Name.Contains(partOfName, StringComparison.CurrentCultureIgnoreCase));
         }
+
+        public Product GetProductById(Guid id)
+        {
+            return _unitOfWork.ProductRepository
+                .GetById(id);
+        }
+
+        public void CreateProduct(Product newProduct)
+        {
+            _unitOfWork.ProductRepository.Create(newProduct);
+        }
     }
 }

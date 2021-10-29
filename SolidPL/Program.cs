@@ -1,4 +1,5 @@
 ﻿using System;
+using SolidPL.App;
 
 namespace SolidPL
 {
@@ -6,9 +7,8 @@ namespace SolidPL
     {
         private static void Main()
         {
-            //Application application = Application.Instance;
-            //application.Run();
-            Console.WriteLine("MainPageController"[0..^"Controller".Length]);
+            Application application = new();
+            application.Run();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using SolidBLL.Menus.MainMenuOptions.AdminOptions;
 using SolidBLL.Menus.MainMenuOptions.GuestOnlyOptions;
 using SolidBLL.Menus.MainMenuOptions.UserOptions;
 
@@ -14,6 +15,9 @@ namespace SolidBLL.Menus.MainMenuOptions
             serviceCollection.AddTransient<IMainMenuOption, SearchByNameOption>();
             serviceCollection.AddTransient<IMainMenuOption, LogoutOption>();
             serviceCollection.AddTransient<IMainMenuOption, AddToCartOption>();
+            serviceCollection.AddTransient<IMainMenuOption, AddNewProductOption>();
+            serviceCollection.AddTransient<IMainMenuOption, CartNewOrderOption>();
+            serviceCollection.AddTransient<IMainMenuOption, ViewOrdersOption>();
         }
     }
 }

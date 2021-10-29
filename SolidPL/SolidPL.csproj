@@ -15,4 +15,8 @@
     <ProjectReference Include="..\SolidBLL\SolidBLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="App\" />
+  </ItemGroup>
+
 </Project>

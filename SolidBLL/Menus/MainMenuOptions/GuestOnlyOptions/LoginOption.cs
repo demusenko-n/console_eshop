@@ -16,25 +16,25 @@ namespace SolidBLL.Menus.MainMenuOptions.GuestOnlyOptions
             _userService = userService;
         }
 
-       // public override IMenu ParentMenu { get; }
+       // public override Menu ParentMenu { get; }
 
        public override string Name => "Login";
 
        public override void Execute()
         {
-            _presenter.Write("Input login:\n");
+            _presenter.WriteLine("Input login:");
             var login = _presenter.Read();
-            _presenter.Write("Input password:\n");
+            _presenter.WriteLine("Input password:");
             var password = _presenter.Read();
             var user = _userService.GetUserByLoginPassword(login, password);
             if (user == null)
             {
-                _presenter.Write("Invalid login or password!\n");
+                _presenter.WriteLine("Invalid login or password!");
             }
             else
             {
                 _session["User"] = user;
-                _presenter.Write("Successful login\n");
+                _presenter.WriteLine("Successful login");
             }
         }
     }

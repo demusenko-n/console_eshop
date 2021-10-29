@@ -4,7 +4,7 @@ namespace SolidBLL.Options
 {
     public interface IOption
     {
-        //IMenu ParentMenu { get; }
+        //Menu ParentMenu { get; }
         string Name { get; }
         Role AccessRequired { get; }
         bool ForbidForHigherRoles { get; }

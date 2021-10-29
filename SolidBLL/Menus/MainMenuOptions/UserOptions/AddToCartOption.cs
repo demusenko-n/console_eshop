@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using SolidBLL.Options;
 using SolidBLL.Services;
-using SolidDAL.Entities;
 
 namespace SolidBLL.Menus.MainMenuOptions.UserOptions
 {
@@ -14,38 +13,38 @@ namespace SolidBLL.Menus.MainMenuOptions.UserOptions
         public override string Name => "Add products to cart";
         public override void Execute()
         {
-            _presenter.Write("Enter the name or part of the name of the product: ");
+            _presenter.WriteLine("Enter the name or part of the name of the product: ");
             var inputStr = _presenter.Read();
             var searchResults = _productService.GetProductsByPartOfName(inputStr).ToArray();
             if (searchResults.Length <= 0)
             {
-                _presenter.Write("Nothing found.\n");
+                _presenter.WriteLine("Nothing found.");
                 return;
             }
 
-            _presenter.Write("Results:\n");
+            _presenter.WriteLine("Results:");
             for (var i = 0; i < searchResults.Length; i++)
             {
                 var product = searchResults[i];
-                _presenter.Write($"{i + 1}. \n{product.Name}\n{product.Description}\nPrice: {product.Price}\n");
+                _presenter.WriteLine($"{i + 1}. \n{product.Name}\n{product.Description}\nPrice: {product.Price}");
             }
 
             while (true)
             {
-                _presenter.Write("Input product number to add in cart (press esc to cancel): ");
+                _presenter.WriteLine("Input product number to add in cart (press esc to cancel): ");
                 inputStr = _presenter.Read();
                 int indexInput;
                 while (!int.TryParse(inputStr, out indexInput) || indexInput - 1 >= searchResults.Length || indexInput - 1 < 0)
                 {
-                    _presenter.Write("Invalid input!\n");
+                    _presenter.WriteLine("Invalid input!");
                     inputStr = _presenter.Read();
                 }
 
-                Product selectedProduct = searchResults[indexInput - 1];
+                var selectedProduct = searchResults[indexInput - 1];
 
-                Cart cart = (Cart)_session["Cart"];
+                var cart = (Cart)_session["Cart"];
                 cart.Add(selectedProduct.Id);
-                _presenter.Write($"Product {selectedProduct.Name} added!\n");
+                _presenter.WriteLine($"Product {selectedProduct.Name} added!");
             }
         }
 

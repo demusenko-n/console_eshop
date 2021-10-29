@@ -32,7 +32,7 @@ namespace SolidDAL.Repositories
         }
         public void Update(Product item)
         {
-            int index = _context.Products.FindIndex(product => product.Id == item.Id);
+            var index = _context.Products.FindIndex(product => product.Id == item.Id);
             if (index == -1)
             {
                 throw new InvalidOperationException("Item doesn't exist in collection");

@@ -24,7 +24,7 @@ namespace SolidDAL.Entities
         {
             unchecked
             {
-                int hash = 17;
+                var hash = 17;
                 hash = hash * 29 + GetType().GetHashCode();
                 hash = hash * 29 + Id.GetHashCode();
                 return hash;

@@ -11,20 +11,20 @@ namespace SolidBLL.Menus.MainMenuOptions.GuestOnlyOptions
         public override string Name => "Search for products by name";
         public override void Execute()
         {
-            _presenter.Write("Enter the name or part of the name of the product: ");
+            _presenter.WriteLine("Enter the name or part of the name of the product: ");
             var inputStr = _presenter.Read();
             var searchResults = _productService.GetProductsByPartOfName(inputStr).ToArray();
             if (searchResults.Length > 0)
             {
-                _presenter.Write("Results:\n");
+                _presenter.WriteLine("Results:");
                 foreach (var product in searchResults)
                 {
-                    _presenter.Write($"\n{product.Name}\n{product.Description}\nPrice: {product.Price}\n");
+                    _presenter.WriteLine($"\n{product.Name}\n{product.Description}\nPrice: {product.Price}");
                 }
             }
             else
             {
-                _presenter.Write("Nothing found.\n");
+                _presenter.WriteLine("Nothing found.");
             }
 
         }
