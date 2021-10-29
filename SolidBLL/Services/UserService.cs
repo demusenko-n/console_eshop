@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using SolidDAL.Entities;
 using SolidDAL.UoW;
 
@@ -36,5 +38,19 @@ namespace SolidBLL.Services
         }
 
         public User Guest { get; } = new("Guest", "", "Guest", "<Authorize first>") { Role = Role.Guest };
+        public void UpdateUser(User user)
+        {
+            _unitOfWork.UserRepository.Update(user);
+        }
+
+        public IEnumerable<User> GetAllUsersByString(string strToFind)
+        {
+            return _unitOfWork.UserRepository
+                .GetAllByFilter(user => user.Name.Contains(strToFind, StringComparison.CurrentCultureIgnoreCase) 
+                                        || user.Email.Contains(strToFind, StringComparison.CurrentCultureIgnoreCase) 
+                                        || user.Login.Contains(strToFind, StringComparison.CurrentCultureIgnoreCase));
+        }
+
+       
     }
 }

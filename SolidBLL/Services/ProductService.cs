@@ -29,5 +29,16 @@ namespace SolidBLL.Services
         {
             _unitOfWork.ProductRepository.Create(newProduct);
         }
+
+        public IEnumerable<Product> GetAllProductsByString(string strToFind)
+        {
+            return _unitOfWork.ProductRepository.GetAllByFilter(product =>
+                product.Name.Contains(strToFind, StringComparison.CurrentCultureIgnoreCase));
+        }
+
+        public void UpdateProduct(Product product)
+        {
+            _unitOfWork.ProductRepository.Update(product);
+        }
     }
 }

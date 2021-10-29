@@ -13,7 +13,7 @@ namespace SolidPL
             return result;
         }
         public void WriteLine(string text) => Console.WriteLine(text);
-        public void Clear() => ConsoleUtility.CustomClear();
+        public void Clear() => /*ConsoleUtility.CustomClear();*/Console.Clear();
         public void Pause() => Console.ReadKey();
     }
 }

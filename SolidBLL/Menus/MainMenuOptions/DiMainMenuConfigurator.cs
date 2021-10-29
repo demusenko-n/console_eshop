@@ -1,7 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using SolidBLL.Menus.MainMenuOptions.AdminOptions;
+using SolidBLL.Menus.MainMenuOptions.AdminOptions.ChangeProductInfoMenuOptions;
+using SolidBLL.Menus.MainMenuOptions.AdminOptions.ManageUserDataMenuOptions;
 using SolidBLL.Menus.MainMenuOptions.GuestOnlyOptions;
 using SolidBLL.Menus.MainMenuOptions.UserOptions;
+using SolidBLL.Menus.MainMenuOptions.UserOptions.ChangePersonalDataMenuOptions;
 
 namespace SolidBLL.Menus.MainMenuOptions
 {
@@ -18,6 +21,13 @@ namespace SolidBLL.Menus.MainMenuOptions
             serviceCollection.AddTransient<IMainMenuOption, AddNewProductOption>();
             serviceCollection.AddTransient<IMainMenuOption, CartNewOrderOption>();
             serviceCollection.AddTransient<IMainMenuOption, ViewOrdersOption>();
+            serviceCollection.AddTransient<IMainMenuOption, ChangePersonalDataMenu>();
+            serviceCollection.AddTransient<IMainMenuOption, ManageUserDataMenu>();
+            serviceCollection.AddTransient<IMainMenuOption, ChangeProductInfoMenu>();
+
+            DiChangePersonalDataMenuConfigurator.Configure(serviceCollection);
+            DiManageUserDataMenuConfigurator.Configure(serviceCollection);
+            DiChangeProductInfoMenuConfigurator.Configure(serviceCollection);
         }
     }
 }

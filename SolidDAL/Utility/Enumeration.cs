@@ -57,7 +57,15 @@ namespace SolidDAL.Utility
             return left.Id >= right.Id;
         }
 
+        public static bool operator ==(Enumeration left, Enumeration right)
+        {
+            return left?.Equals(right) ?? false;
+        }
 
+        public static bool operator !=(Enumeration left, Enumeration right)
+        {
+            return !(left == right);
+        }
 
         public override int GetHashCode()
         {

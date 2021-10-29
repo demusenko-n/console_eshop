@@ -9,5 +9,7 @@ namespace SolidBLL.Services
         IEnumerable<Product> GetProductsByPartOfName(string partOfName);
         Product GetProductById(Guid id);
         void CreateProduct(Product newProduct);
+        IEnumerable<Product> GetAllProductsByString(string strToFind);
+        void UpdateProduct(Product product);
     }
 }

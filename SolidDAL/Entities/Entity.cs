@@ -8,6 +8,7 @@ namespace SolidDAL.Entities
 
         protected Entity()
         {
+
             Id = Guid.NewGuid();
         }
 

@@ -7,5 +7,6 @@ namespace SolidBLL.Services
     {
         void CreateOrder(Order newOrder);
         IEnumerable<Order> GetAllOrdersByUser(User user);
+        void UpdateOrder(Order order);
     }
 }

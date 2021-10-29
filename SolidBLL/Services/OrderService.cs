@@ -21,5 +21,10 @@ namespace SolidBLL.Services
         {
             return _unitOfWork.OrderRepository.GetAllByFilter(order => order.Client.Equals(user));
         }
+
+        public void UpdateOrder(Order order)
+        {
+            _unitOfWork.OrderRepository.Update(order);
+        }
     }
 }

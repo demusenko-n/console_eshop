@@ -9,12 +9,14 @@ namespace SolidBLL.Options
         private readonly List<IOption> _options;
         private readonly Session _session;
         private readonly IPresenter _presenter;
+
         public abstract string Name { get; }
         public abstract Role AccessRequired { get; }
         public abstract bool ForbidForHigherRoles { get; }
-
+        protected virtual void PreExecuteActions() { }
         public void Execute()
         {
+            PreExecuteActions();
             while (true)
             {
                 var counter = 1;
@@ -27,7 +29,7 @@ namespace SolidBLL.Options
                     _presenter.WriteLine($"{counter}. {option.Name}");
                     counter++;
                 }
-
+                _presenter.WriteLine("Press ESC to go back.");
                 var userInput = _presenter.Read();
                 int optionIndex;
 
