@@ -1,5 +1,4 @@
-﻿using System;
-using SolidPL.App;
+﻿using SolidPL.App;
 
 namespace SolidPL
 {

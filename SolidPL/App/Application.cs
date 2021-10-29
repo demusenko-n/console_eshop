@@ -8,9 +8,6 @@ namespace SolidPL.App
 {
     public class Application
     {
-        public Application()
-        { }
-
         public void Run()
         {
             ServiceCollection services = new();
