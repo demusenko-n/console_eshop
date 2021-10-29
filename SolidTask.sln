@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidBLL", "SolidBLL\SolidB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidPL", "SolidPL\SolidPL.csproj", "{1AC4F37F-7F13-46D3-B28F-8088BE75FFB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidTest", "SolidTest\SolidTest.csproj", "{68B886BC-8E5F-4DC3-8CCA-A215AA11CA6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1AC4F37F-7F13-46D3-B28F-8088BE75FFB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AC4F37F-7F13-46D3-B28F-8088BE75FFB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AC4F37F-7F13-46D3-B28F-8088BE75FFB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B886BC-8E5F-4DC3-8CCA-A215AA11CA6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B886BC-8E5F-4DC3-8CCA-A215AA11CA6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B886BC-8E5F-4DC3-8CCA-A215AA11CA6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B886BC-8E5F-4DC3-8CCA-A215AA11CA6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
