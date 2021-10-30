@@ -8,9 +8,9 @@ namespace SolidDAL.Repositories
 {
     public class OrderCollectionRepository : IRepository<Order>
     {
-        private readonly StoreContext _context;
+        private readonly IStoreContext _context;
 
-        public OrderCollectionRepository(StoreContext context)
+        public OrderCollectionRepository(IStoreContext context)
         {
             _context = context;
         }

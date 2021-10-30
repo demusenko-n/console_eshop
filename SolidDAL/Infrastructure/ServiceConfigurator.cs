@@ -10,7 +10,7 @@ namespace SolidDAL.Infrastructure
     {
         public static void Configure(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddSingleton<StoreContext>();
+            serviceCollection.AddSingleton<IStoreContext, StoreContext>();
             serviceCollection.AddTransient<IRepository<Product>, ProductCollectionRepository>();
             serviceCollection.AddTransient<IRepository<User>, UserCollectionRepository>();
             serviceCollection.AddTransient<IRepository<Order>, OrderCollectionRepository>();

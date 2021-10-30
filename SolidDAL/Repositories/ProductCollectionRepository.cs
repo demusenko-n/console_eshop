@@ -8,9 +8,9 @@ namespace SolidDAL.Repositories
 {
     public class ProductCollectionRepository : IRepository<Product>
     {
-        private readonly StoreContext _context;
+        private readonly IStoreContext _context;
 
-        public ProductCollectionRepository(StoreContext context)
+        public ProductCollectionRepository(IStoreContext context)
         {
             _context = context;
         }

@@ -3,7 +3,7 @@ using SolidDAL.Entities;
 
 namespace SolidDAL.Context
 {
-    public class StoreContext
+    public class StoreContext : IStoreContext
     {
         public List<Order> Orders { get; }
 

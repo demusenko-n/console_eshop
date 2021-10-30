@@ -9,13 +9,13 @@ namespace SolidDAL.UoW
     {
 
 
-        private readonly StoreContext _storeContext;
+        private readonly IStoreContext _storeContext;
 
         private IRepository<Product> _productRepository;
         private IRepository<Order> _orderRepository;
         private IRepository<User> _userRepository;
 
-        public UnitOfWork(StoreContext storeContext)
+        public UnitOfWork(IStoreContext storeContext)
         {
             _storeContext = storeContext;
         }

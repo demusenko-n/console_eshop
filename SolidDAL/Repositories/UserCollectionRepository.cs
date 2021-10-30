@@ -8,9 +8,9 @@ namespace SolidDAL.Repositories
 {
     public class UserCollectionRepository : IRepository<User>
     {
-        private readonly StoreContext _context;
+        private readonly IStoreContext _context;
 
-        public UserCollectionRepository(StoreContext context)
+        public UserCollectionRepository(IStoreContext context)
         {
             _context = context;
         }
